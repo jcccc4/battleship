@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 40px 1fr 40px;
+    min-height: 100vh;
+    background-color: red;
+}
+
+header{
+    background-color: blue;
+}
+footer{
+
+    background-color: pink;
+    
+}
+
+.boards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player,
+.ai{
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    display: grid;
+    grid-template: repeat(10, 1fr)/repeat(10,1fr);
+}
+
+.tiles{
+    background-color: olivedrab;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
