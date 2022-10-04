@@ -3,38 +3,70 @@ body{
     display: grid;
     grid-template-rows: 40px 1fr 40px;
     min-height: 100vh;
-    background-color: red;
 }
 
-header{
-    background-color: blue;
-}
+header,
 footer{
-
-    background-color: pink;
-    
+    background-color: #f8f9fa;
+    outline: 1px solid black;
 }
 
 .boards{
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
+    
 }
 
 .player,
 .ai{
     height: 300px;
     width: 300px;
-    background-color: aqua;
+    background-color: #e9ecef;
     display: grid;
     grid-template: repeat(10, 1fr)/repeat(10,1fr);
+    position: relative;
+    grid-gap: 0;
 }
 
-.tiles{
-    background-color: olivedrab;
+.boardContainer{
+    background-color: #f8f9fa;
+    height: 100%;
     border: solid 1px black;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.placeShip{
+    position: absolute;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    top: calc(180px + 50%);
+    background-color: antiquewhite;
+}
+
+.tilesPlayer,
+.tilePlace,
+.tilesAi{
+
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+}
+
+.playeShip{
+    position: absolute;
+
+    height: 100px;
+    left: 10px;
+    top: 100px;
+    margin-top: -100px;
 }
 

@@ -7,16 +7,17 @@ function Ship (name, length) {
     }
     const hit = (index) => shipArray[index].hit = true;
     const isSunk = () => shipArray.every((element) => element.hit ==true);
+    const isPlaced = () => placed = true;
+    const getPlaced = () => placed;
     const getLength = () => length;
     const getHealth = () => health;
-    const isPlaced = () => placed;
     const getShipArray= () => shipArray;
     const getName = () => name;
     
     return{
-        hit,  getShipArray, isSunk, 
-        getLength, getHealth,
-        isPlaced, getName
+        hit,   isSunk, isPlaced,
+        getShipArray, getLength, getHealth,
+        getName, getPlaced
     }
 
 }
